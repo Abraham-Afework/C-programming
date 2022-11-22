@@ -2,27 +2,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * print_S - writes the character str to stdout
+ * print_special_string - writes the character str with a special to stdout
  * @str: The string to print
  *
  * Return: the number of character outputs
  */
-int print_S(va_list str)
+int print_special_string(va_list str)
 {
 	char *string;
-	int i;
+	int count, len, s;
 
-	i = 0;
+	count = 0;
 	string = va_arg(str, char *);
 
-	if (string == NULL)
+	while (string[count] != '\0')
 	{
-		string = "(null)";
+		if (string[count] < 32 || string[count] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			len = len + 2;
+			s = string[count];
+			if (s < 16)
+			{
+				_putchar('0');
+				len++;
+			}
+			len = len + print_hexadecimal(s, 0);
+		}
+		else
+		{
+			_putchar(string[count]);
+			len++;
+		}
+		count++;
 	}
-	while (string[i])
-	{	
-		_putchar(string[i]);
-		i++;
-	}
-	return (i);
+	return (len);
 }

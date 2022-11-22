@@ -29,7 +29,8 @@ int print_binary(va_list b);
 int print_octal(va_list o);
 int print_x(va_list x);
 int print_X(va_list X);
-int print_hexadecmial(unsigned int number,int checker);
+int print_special_string(va_list str);
+int print_hexadecimal(unsigned int number, unsigned int checker);
 int (*function_finder(const char *format))(va_list);
 
 #endif
