@@ -28,6 +28,7 @@ int print_unsigned(va_list u);
 int print_binary(va_list b);
 int print_octal(va_list o);
 int print_x(va_list x);
+int print_pointer(va_list pointer);
 int print_X(va_list X);
 int print_special_string(va_list str);
 int print_hexadecimal(unsigned int number, unsigned int checker);

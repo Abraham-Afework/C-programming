@@ -21,6 +21,7 @@ int(*function_finder(const char *format))(va_list)
 	       	{"x", print_x},
 	       	{"X", print_X},
 	       	{"S", print_special_string},
+	       	{"p", print_pointer},
 		{NULL, NULL}
 	};
 	int i;
