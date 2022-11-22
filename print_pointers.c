@@ -7,7 +7,7 @@
 int print_pointer(va_list pointer)
 {
 	void *p;
-	unsigned long a;
+	unsigned long int a;
 	int count, b;
 
 	char *string = "(nil)";
