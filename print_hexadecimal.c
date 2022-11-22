@@ -13,7 +13,7 @@
 int print_hexadecimal(unsigned int num, unsigned int checker)
 {
 	int j, k, l, count, alphacase, upper, lower;
-	int integer[200];
+	int integer[20];
 
 	k = count = 0;
 	lower = 39;
@@ -36,6 +36,7 @@ int print_hexadecimal(unsigned int num, unsigned int checker)
 				j = j + alphacase;
 			integer[k] = j;
 			k++;
+			num = num / 16;
 		}
 		for (l = k - 1; l >= 0; l--)
 		{

@@ -10,7 +10,7 @@
 int print_unsigned(va_list u)
 {
 	int i, j, k, l, count;
-	unsigned int num, integer[200200];
+	unsigned int num, integer[200000];
 
 	num = va_arg(u, unsigned int);
 	count = 0;
@@ -44,8 +44,8 @@ int print_unsigned(va_list u)
 	}
 	else
 	{
-		_putchar (0);
-		return (0);
+		_putchar ('0');
+		return (1);
 	}
 	return (count);
 }
